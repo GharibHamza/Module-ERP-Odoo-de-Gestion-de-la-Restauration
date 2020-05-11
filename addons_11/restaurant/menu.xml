@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menus -->
+			<menuitem id="commande_root" name="commande"/>
+			<menuitem id="commande_root_menu" parent="commande_root" name="commande"/>
+			<menuitem id="commande_menu" name="commande" parent="commande_root_menu" action="commande_action_view"/>
+			<menuitem id="produit_menu" name="produit" parent="commande_root_menu" action="produit_action_view"/>
+			<menuitem id="cuisinier_menu" name="cuisinier" parent="commande_root_menu" action="cuisinier_action_view"/>
+			<menuitem id="serveur_menu" name="serveur" parent="commande_root_menu" action="serveur_action_view"/>
+			<menuitem id="table_menu" name="table" parent="commande_root_menu" action="table_action_view"/>
+			<menuitem id="client_menu" name="client" parent="commande_root_menu" action="client_action_view"/>
+			<menuitem id="facture_menu" name="facture" parent="commande_root_menu" action="facture_action_view"/>
+			<menuitem id="caissier_menu" name="caissier" parent="commande_root_menu" action="caissier_action_view"/>
+</odoo>

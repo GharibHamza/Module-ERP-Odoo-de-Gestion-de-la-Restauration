@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+            <!--Tree view-->
+            <record model="ir.ui.view" id="commande_tree_view">
+                <field name="name">commande.commande.tree</field>
+                <field name="model">commande.commande</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="commande">
+                        <field name="nom"/>
+                        <field name="cuisinier_id"/>
+                        <field name="serveur_id"/>
+                        <field name="caissier_id"/>
+                        <field name="facture_id"/>
+                        <field name="client_id"/>
+                        
+                    </tree>
+                </field>
+            </record>
+            
+			<!--form view-->
+            <record model="ir.ui.view" id="commande_form_view">
+                <field name="name">commande.commande.form</field>
+                <field name="model">commande.commande</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="commande">
+                     <sheet>
+                    	<group>
+	                    	<group>
+	                    		<field name="nom"/>
+	                    		<field name="cuisinier_id"/>
+	                    		<field name="serveur_id"/>
+	                    		<field name="caissier_id"/>
+                                <field name="facture_id"/>
+                                <field name="client_id"/>
+	                    		
+	                    	</group>
+	                    	
+                    	</group>
+                    	
+                    </sheet>
+                   </form>
+                </field>
+            </record>
+			
+			<!-- Action view-->
+            <record model="ir.actions.act_window" id="commande_action_view">
+                <field name="name">commande.commande</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">commande.commande</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <!-- <field name="context">{'default_field':'value'}</field>-->
+            </record>
+			
+<!--#######################################################################################################################  -->
+
+<!--Tree view-->
+            <record model="ir.ui.view" id="produit_tree_view">
+                <field name="name">produit.produit.tree</field>
+                <field name="model">produit.produit</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="produit">
+                        <field name="nom"/>
+                        <field name="type"/>
+                        <field name="quantite"/>
+                        <field name="commande_id"/>
+                        <field name="cuisinier_id"/>
+                        
+                        
+                    </tree>
+                </field>
+            </record>
+            
+			<!--form view-->
+            <record model="ir.ui.view" id="produit_form_view">
+                <field name="name">produit.produit.form</field>
+                <field name="model">produit.produit</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="produit">
+                     <sheet>
+                    	<group>
+	                    	<group>
+	                    		<field name="nom"/>
+	                    	    <field name="commande_id"/>
+	                    	    <field name="cuisinier_id"/>
+	                    	</group>
+	                    	<group>
+	                    		<field name="type"/>
+	                    	</group>
+	                    	<group>
+	                    		<field name="quantite"/>
+	                    	</group>
+                    	</group>
+                    	
+                    </sheet>
+                   </form>
+                </field>
+            </record>
+			
+			<!-- Action view-->
+            <record model="ir.actions.act_window" id="produit_action_view">
+                <field name="name">produit.produit</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">produit.produit</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <!-- <field name="context">{'default_field':'value'}</field>-->
+            </record>
+            <!--#######################################################################################################################  -->
+
+<!--Tree view-->
+            <record model="ir.ui.view" id="cuisinier_tree_view">
+                <field name="name">cuisinier.cuisinier.tree</field>
+                <field name="model">cuisinier.cuisinier</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="cuisinier">
+                        <field name="nom"/>
+                       
+                        
+                        
+                    </tree>
+                </field>
+            </record>
+            
+			<!--form view-->
+            <record model="ir.ui.view" id="cuisinier_form_view">
+                <field name="name">cuisinier.cuisinier.form</field>
+                <field name="model">cuisinier.cuisinier</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="cuisinier">
+                     <sheet>
+                    	<group>
+	                    	<group>
+	                    		<field name="nom"/>
+	                    	    
+	                    	</group>
+	                    	
+                    	</group>
+                    	
+                    </sheet>
+                   </form>
+                </field>
+            </record>
+			
+			<!-- Action view-->
+            <record model="ir.actions.act_window" id="cuisinier_action_view">
+                <field name="name">cuisinier.cuisinier</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">cuisinier.cuisinier</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <!-- <field name="context">{'default_field':'value'}</field>-->
+            </record>
+            <!--#######################################################################################################################  -->
+
+<!--Tree view-->
+            <record model="ir.ui.view" id="serveur_tree_view">
+                <field name="name">serveur.serveur.tree</field>
+                <field name="model">serveur.serveur</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="serveur">
+                        <field name="nom"/>
+                        <field name="prenom"/>
+                        <field name="pos"/>
+                        <field name="table_id"/>
+                        
+                        
+                        
+                    </tree>
+                </field>
+            </record>
+            
+			<!--form view-->
+            <record model="ir.ui.view" id="serveur_form_view">
+                <field name="name">serveur.serveur.form</field>
+                <field name="model">serveur.serveur</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="serveur">
+                     <sheet>
+                    	<group>
+	                    	<group>
+	                    		<field name="nom"/>
+	                    	    <field name="prenom"/>
+	                    	    <field name="pos"/>
+	                    	    <field name="table_id"/>
+	                    	
+                    	</group>
+                    	</group>
+                    </sheet>
+                   </form>
+                </field>
+            </record>
+			
+			<!-- Action view-->
+            <record model="ir.actions.act_window" id="serveur_action_view">
+                <field name="name">serveur.serveur</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">serveur.serveur</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <!-- <field name="context">{'default_field':'value'}</field>-->
+            </record>
+            
+      <!--#######################################################################################################################  -->
+
+<!--Tree view-->
+            <record model="ir.ui.view" id="table_tree_view">
+                <field name="name">table.table.tree</field>
+                <field name="model">table.table</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="table">
+                        <field name="numero"/>
+                        <field name="occupe"/>
+                        <field name="client_id"/>
+                        
+                        
+                    </tree>
+                </field>
+            </record>
+            
+			<!--form view-->
+            <record model="ir.ui.view" id="table_form_view">
+                <field name="name">table.table.form</field>
+                <field name="model">table.table</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="table">
+                     <sheet>
+                    	<group>
+	                    	<group>
+	                    		<field name="numero"/>
+	                    	    <field name="occupe"/>
+	                    	    <field name="client_id"/>
+	                    	    
+	                    	</group>
+	                    	
+                    	</group>
+                    	
+                    </sheet>
+                   </form>
+                </field>
+            </record>
+			
+			<!-- Action view-->
+            <record model="ir.actions.act_window" id="table_action_view">
+                <field name="name">table.table</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">table.table</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <!-- <field name="context">{'default_field':'value'}</field>-->
+            </record>
+            <!--#######################################################################################################################  -->
+
+<!--Tree view-->
+            <record model="ir.ui.view" id="client_tree_view">
+                <field name="name">client.client.tree</field>
+                <field name="model">client.client</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="client">
+                        <field name="nom"/>
+                        <field name="prenom"/>
+                      
+                        
+                        
+                        
+                    </tree>
+                </field>
+            </record>
+            
+			<!--form view-->
+            <record model="ir.ui.view" id="client_form_view">
+                <field name="name">client.client.form</field>
+                <field name="model">client.client</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="client">
+                     <sheet>
+                    	<group>
+	                    	<group>
+	                    		<field name="nom"/>
+	                    	    <field name="prenom"/>
+	                    	   
+	                    	
+                    	</group>
+                    	</group>
+                    </sheet>
+                   </form>
+                </field>
+            </record>
+            
+            <!-- Action view-->
+            <record model="ir.actions.act_window" id="client_action_view">
+                <field name="name">client.client</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">serveur.serveur</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <!-- <field name="context">{'default_field':'value'}</field>-->
+            </record>
+            
+            <!--#######################################################################################################################  -->
+
+<!--Tree view-->
+            <record model="ir.ui.view" id="facture_tree_view">
+                <field name="name">facture.facture.tree</field>
+                <field name="model">facture.facture</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="facture">
+                        <field name="code"/>
+                        <field name="payment"/>
+                        <field name="client_id"/>
+                        
+                        
+                        
+                        
+                    </tree>
+                </field>
+            </record>
+            
+			<!--form view-->
+            <record model="ir.ui.view" id="facture_form_view">
+                <field name="name">facture.facture.form</field>
+                <field name="model">facture.facture</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="facture">
+                     <sheet>
+                    	<group>
+	                    	<group>
+	                    		<field name="code"/>
+	                    	    <field name="payment"/>
+	                    	    <field name="client_id"/>
+	                    	   
+	                    	
+                    	</group>
+                    	</group>
+                    </sheet>
+                   </form>
+                </field>
+            </record>
+            
+            <!-- Action view-->
+            <record model="ir.actions.act_window" id="facture_action_view">
+                <field name="name">facture.facture</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">facture.facture</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <!-- <field name="context">{'default_field':'value'}</field>-->
+            </record>
+            
+            <!--#######################################################################################################################  -->
+
+<!--Tree view-->
+            <record model="ir.ui.view" id="caissier_tree_view">
+                <field name="name">caissier.caissier.tree</field>
+                <field name="model">caissier.caissier</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="caissier">
+                        <field name="nom"/>
+                        <field name="prenom"/>
+                        <field name="pos"/>
+                        <field name="facture_id"/>
+                      
+                        
+                        
+                        
+                    </tree>
+                </field>
+            </record>
+            
+			<!--form view-->
+            <record model="ir.ui.view" id="caissier_form_view">
+                <field name="name">caissier.caissier.form</field>
+                <field name="model">caissier.caissier</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="caissier">
+                     <sheet>
+                    	<group>
+	                    	<group>
+	                    		<field name="nom"/>
+	                    	    <field name="prenom"/>
+	                    	    <field name="pos"/>
+	                    	    <field name="facture_id"/>
+	                    	 
+	                    	
+                    	</group>
+                    	</group>
+                    </sheet>
+                   </form>
+                </field>
+            </record>
+            
+            <!-- Action view-->
+            <record model="ir.actions.act_window" id="caissier_action_view">
+                <field name="name">caissier.caissier</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">caissier.caissier</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <!-- <field name="context">{'default_field':'value'}</field>-->
+            </record>      
+</odoo>
